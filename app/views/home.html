@@ -1,7 +1,19 @@
 <h1>{{title}}</h1>
-<ul>
-  <li ng-repeat="friend in friends">{{friend.name}} {{friend.age}}</li>
-</ul>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr ng-repeat="friend in friends">
+    <td>{{friend.name}}</td>
+    <td>{{friend.age}}</td>
+  </tr>
+</table>
 
 <input type='text' ng-model='title'>
+
+<span>Category:</span>
 <select ng-model='selectedValue' ng-options='value for value in items'></select>
+
+<div click-highlight />

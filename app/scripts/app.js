@@ -10,15 +10,11 @@ angular
       .state('home', {
         url: '/',
         templateUrl: 'views/home.html',
-        controller: 'homeCtrl',
-        resolve: {
-          friends: ['$http', function($http) {
-            // return $http.get('/api/friends.json').then(function(response){
-            //   return response.data;
-            // });
-            return [{name: 'So', age: 33}];
-          }]
-        }
+        controller: 'homeCtrl'
+      })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html'
       })
       .state('about', {
         url: '/about',
